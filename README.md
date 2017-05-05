@@ -1,1 +1,73 @@
+---
+title: "README-statemaps"
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+```{r, echo = FALSE}
+cat(paste0("Last Update: ",Sys.time()))
+```
+
 # statemaps
+Perform basic functions for basic map function, including 51 states and DC. Basic functions include
+ clipper to create an outside mask to cover unwanted area for state or county maps
+ mapscale to add scale bar to an existing map
+ northarrow to add north arrow 
+ colbar to add county map and scaled color bar to the right.
+
+Installation
+-----------------
+'# Installing just this library (should get all dependancies)
+library(devtools) 
+install.git_hub("kevinlzheng/statemaps")
+
+'# Installing dependancies separately
+'# set CRAN mirror 
+'#(loads gui in R; in R-Studio select ## of mirror in Console pane)
+'# If know mirror can use "ind=" in 2nd statement and comment out (prefix line with #) the first.
+chooseCRANmirror()
+'#chooseCRANmirror(ind=21)
+'################################################
+'# must run "chooseCRANmirror()" by itself before running the rest of the script
+
+'# libraries to be installed
+data.packages = c(                  
+                  "devtools"        # install helper for non CRAN libraries
+                  ,"installr"       # install helper
+                  ,"digest"         # caused error in R v3.2.3 without it
+                  ,"dataRetrieval"  # loads USGS data into R
+                  ,"knitr"          # create documents in other formats (e.g., PDF or Word)
+                  ,"doBy"           # summary stats
+                  ,"zoo"            # z's ordered observations, use for rolling sd calc
+                  ,"htmltools"      # needed for knitr and doesn't always install properly with Pandoc
+                  ,"rmarkdown"      # needed for knitr and doesn't always install properly with Pandoc
+                  ,"htmltools"      # a dependency that is sometimes missed.
+                  ,"evaluate"       # a dependency that is sometimes missed.
+                  ,"highr"          # a dependency that is sometimes missed.
+                  ,"rmarkdown"      # a dependency that is sometimes missed.
+                  ,"RColorBrewer"   # for coloring boxplot 
+                  )
+                  
+lapply(data.packages,function(x) install.packages(x))
+
+'## pandoc
+require(installr)
+install.pandoc()
+
+
+Purpose
+--------------
+The scatter plot and multiple regression functions have been used for a long time for various projects. 
+
+Usage
+------------
+
