@@ -1,0 +1,13 @@
+Package: statemaps
+Title: Collective Functions to Perform Generalized Linear Model Graphs
+Version: 0.0.0.9000
+Authors@R: person("Kevin", "Zheng", email = "kevinlzheng2000@gmail.com", role = c("aut","cre"))
+Description: This package includes basic map function, including 51 states and DC. It also allow colored mapping.
+Depends:
+    R (>= 3.1.2),
+    raster,
+License: What license is it under?
+Encoding: UTF-8
+URL: https://github.com/kevinlzheng/statemaps
+LazyData: true
+RoxygenNote: 6.0.1.9000
